@@ -1,0 +1,212 @@
+:root {
+  --blue-900: #0b2a5b;
+  --blue-700: #0b5ed7;
+  --blue-100: #eaf3ff;
+  --red-600: #dc3545;
+  --text: #0f172a;
+  --muted: #475569;
+  --card: #ffffff;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--text);
+  background: linear-gradient(180deg, #e9f2ff 0%, #ffffff 55%, #ffffff 100%);
+}
+
+section {
+  scroll-margin-top: 84px; /* sticky navbar offset */
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(11, 94, 215, 0.18), transparent 60%),
+    radial-gradient(700px 380px at 90% 30%, rgba(220, 53, 69, 0.12), transparent 60%),
+    radial-gradient(500px 300px at 65% 90%, rgba(11, 94, 215, 0.12), transparent 60%),
+    linear-gradient(180deg, #dbeafe 0%, #ffffff 65%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  padding: 5.5rem 0;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 3.6vw, 3.6rem);
+  font-weight: 900;
+  color: var(--blue-900);
+}
+
+.hero-tagline {
+  margin-top: 0.75rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  color: var(--muted);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hero-diagram {
+  width: min(440px, 100%);
+  height: auto;
+}
+
+/* Sections */
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-alt {
+  background: #f6f9ff;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--blue-900);
+}
+
+.section-subtitle {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* Cards + hover animations */
+.hover-lift {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+.icon-pill {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(11, 94, 215, 0.12);
+  color: var(--blue-700);
+}
+
+.icon-pill--pink {
+  background: rgba(220, 53, 69, 0.12);
+  color: var(--red-600);
+}
+
+/* Body systems layout: scroll on small, grid on larger */
+.systems-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+.system-card {
+  min-width: 280px;
+  scroll-snap-align: start;
+  background: var(--card);
+}
+
+@media (min-width: 992px) {
+  .systems-row {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+  .system-card {
+    flex: 0 0 calc(33.333% - 0.67rem);
+    min-width: unset;
+  }
+}
+
+/* 3D canvas wrapper */
+.anatomy-canvas {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Quiz */
+.quiz-option {
+  text-align: left;
+  padding: 0.85rem 0.95rem;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.quiz-option:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.1);
+  border-color: rgba(11, 94, 215, 0.28);
+}
+
+.quiz-option--picked {
+  border-color: rgba(220, 53, 69, 0.45);
+  box-shadow: 0 10px 22px rgba(220, 53, 69, 0.12);
+}
+
+.quiz-feedback {
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: #ffffff;
+}
+
+.quiz-feedback.ok {
+  border-color: rgba(34, 197, 94, 0.35);
+  background: rgba(34, 197, 94, 0.06);
+}
+
+.quiz-feedback.no {
+  border-color: rgba(220, 53, 69, 0.35);
+  background: rgba(220, 53, 69, 0.06);
+}
+
+/* Footer */
+.footer {
+  background: #f4f7ff;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.footer-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-link:hover {
+  color: var(--blue-700);
+  text-decoration: underline;
+}
