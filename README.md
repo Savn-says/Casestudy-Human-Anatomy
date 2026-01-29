@@ -63,18 +63,15 @@ Latest Articles: Read articles on various topics related to human anatomy.
 #Screenshots
 Here are some screenshots of the Anatomy Insight platform:
 
-![alt text](image.png)
 
-![alt text](image-1.png)
+<img width="1881" height="933" alt="Screenshot 2026-01-29 083459" src="https://github.com/user-attachments/assets/ca7b8aea-2fbc-4a68-a68d-13526c397ac1" />
 
-![alt text](image-2.png)
+<img width="1845" height="844" alt="Screenshot 2026-01-29 095040" src="https://github.com/user-attachments/assets/eba38ace-88cf-452a-83e8-7293f2317f9a" />
+<img width="1864" height="643" alt="Screenshot 2026-01-29 095116" src="https://github.com/user-attachments/assets/820ed1b6-707c-4786-b512-c94a5b1f560e" />
+<img width="1824" height="798" alt="Screenshot 2026-01-29 095151" src="https://github.com/user-attachments/assets/2a627728-cbba-489f-955c-c22fba611d41" />
+<img width="968" height="806" alt="Screenshot 2026-01-29 095215" src="https://github.com/user-attachments/assets/e233cba9-a8a7-43fc-b747-bbefb161023a" />
 
-![alt text](image-3.png)
 
-![alt text](image-4.png)
-
-![alt text](image-5.png)
-I
 
 #Technologies Used
 Frontend:
